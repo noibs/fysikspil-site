@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./page.module.scss";
 import DButton from "@/components/DButton";
 import Card from "@/components/Card";

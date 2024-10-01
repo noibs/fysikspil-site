@@ -6,7 +6,7 @@ const DButton: React.FC<{
   text?: string;
   color?: string;
   icon?: string;
-  fontSize: string;
+  fontSize?: string;
   padding?: string;
   link?: string;
 }> = ({
