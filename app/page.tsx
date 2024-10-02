@@ -16,8 +16,8 @@ export default function Home() {
         <DButton
           link="/om-os"
           text="Om os"
-          fontSize="1rem"
-          padding="0.5rem 1rem"
+          //padding="0.5rem 1rem"
+          icon="fa-regular fa-users"
         />
       </nav>
       <main className={styles.main}>

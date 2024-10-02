@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import styles from "./page.module.scss";
 import DButton from "@/components/DButton";
 import Card from "@/components/Card";
@@ -42,22 +42,22 @@ export default function OmOs() {
           </div>
         </div>
         <div className={styles.creators}>
-          <h1>Mød stifterne bag projektet</h1>
+          <h1 className={styles.title}>Mød stifterne bag projektet</h1>
           <div className={styles.photos}>
             <Card
               color="#fff"
               title="John Bo"
               img="/img/john.jpg"
-              width={300}
+              width={200}
             />
             <Card
-              width={300}
+              width={200}
               color="#fff"
               title="Nina Olsen"
               img="/img/nina.jpg"
             />
             <Card
-              width={300}
+              width={200}
               color="#fff"
               title="Jørgen Nielsen"
               img="/img/joergen.jpg"

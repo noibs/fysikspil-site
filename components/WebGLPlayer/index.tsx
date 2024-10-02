@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Script from "next/script";
 import styles from "./page.module.scss";
 
@@ -37,10 +37,22 @@ interface HTMLCanvasElementExtended extends HTMLCanvasElement {
 
 const UnityWebGL: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElementExtended>(null);
+  const [loadingProgress, setLoadingProgress] = useState<number>(0);
+
+  useEffect(() => {
+    const gameSaved = localStorage.getItem("gameSaved");
+    if (!gameSaved) {
+      localStorage.setItem("gameSaved", "true");
+      window.location.reload();
+    }
+  }, []);
 
   useEffect(() => {
     const loadUnityInstance = () => {
-      if (!window.createUnityInstance || !canvasRef.current) return;
+      if (!window.createUnityInstance || !canvasRef.current) {
+        console.log("failed to load unity instance");
+        return;
+      }
 
       const config = {
         dataUrl: "/game/Build/Build7.data",
@@ -57,6 +69,7 @@ const UnityWebGL: React.FC = () => {
         config,
         (progress: number) => {
           console.log(`Loading: ${progress * 100}%`);
+          setLoadingProgress(progress * 100);
         }
       );
     };
@@ -91,6 +104,13 @@ const UnityWebGL: React.FC = () => {
     <>
       <Script src="/game/Build/Build7.loader.js" strategy="beforeInteractive" />
       <div id="unity-container" className={styles.container}>
+        {loadingProgress < 100 && (
+          <div className={styles.loadContainer}>
+            <h3>Loading...</h3>
+            <progress value={loadingProgress} max="100" />
+            <p>Refresh siden hvis der ikke sker noget.</p>
+          </div>
+        )}
         <canvas
           id="unity-canvas"
           ref={canvasRef}

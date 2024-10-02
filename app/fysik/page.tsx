@@ -1,10 +1,12 @@
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import styles from "./page.module.scss";
 import DButton from "@/components/DButton";
+import Watermark from "@/components/Watermark";
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <Watermark opacity={0.02} />
       <nav className={styles.nav}>
         <div className={styles.logo}>
           <Link href={"/"}>

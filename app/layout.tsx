@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.scss";
 import Script from "next/script";
+import { ViewTransitions } from "next-view-transitions";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,14 +20,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="da">
-      <head>
-        <Script
-          src="https://kit.fontawesome.com/e4cef1fffb.js"
-          crossOrigin="anonymous"
-        />
-      </head>
-      <body className={inter.variable}>{children}</body>
-    </html>
+    <ViewTransitions>
+      <html lang="da">
+        <head>
+          <Script
+            src="https://kit.fontawesome.com/e4cef1fffb.js"
+            crossOrigin="anonymous"
+          />
+        </head>
+        <body className={inter.variable}>{children}</body>
+      </html>
+    </ViewTransitions>
   );
 }

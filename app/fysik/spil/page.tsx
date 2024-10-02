@@ -1,7 +1,7 @@
 import UnityWebGL from "@/components/WebGLPlayer";
 import styles from "./page.module.scss";
 import DButton from "@/components/DButton";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import Watermark from "@/components/Watermark";
 
 const UnityGamePage: React.FC = () => {
@@ -23,18 +23,18 @@ const UnityGamePage: React.FC = () => {
           link="/fysik"
         />
       </div>
-      <h1 id="title">Fysikspil</h1>
+      <h1 className={styles.title}>Fysikspil</h1>
       <div
         className={styles.gameContainer}
         style={{ width: "1000px", height: "700px" }}
       >
         <UnityWebGL />
-        <div className={styles.warning}>
+        {/* <div className={styles.warning}>
           <p>
             Spillet loader, vent venligst. <br /> Prøv at refreshe siden hvis
             det tager for lang tid.
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -27,7 +27,7 @@ const Card: React.FC<{
   height,
 }) => {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${unavailable ? styles.noHover : ""}`}>
       {unavailable && (
         <div className={styles.unavailable}>
           <i className="fa-regular fa-lock"></i>

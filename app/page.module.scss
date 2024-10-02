@@ -17,7 +17,7 @@
 
 .nav {
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -48,6 +48,7 @@
         align-items: center;
         justify-content: center;
       }
+
       display: flex;
       flex-direction: column;
 
@@ -64,7 +65,9 @@
   width: 300px;
   height: 300px;
 
-  .atom, .bulb, .battery {
+  .atom,
+  .bulb,
+  .battery {
     position: absolute;
     transition: all 0.3s ease;
   }
@@ -91,16 +94,18 @@
     left: 30px;
     font-size: 7rem;
     transform: rotate(15deg);
-  
+
   }
 
   &:hover {
     .atom {
       transform: rotate(0deg) scale(1.1);
     }
+
     .bulb {
       transform: rotate(30deg) scale(1.1);
     }
+
     .battery {
       transform: scale(1.1);
     }

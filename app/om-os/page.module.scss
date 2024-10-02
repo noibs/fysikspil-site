@@ -1,74 +1,74 @@
-
-
 .page {
-    --accent: var(--orange);
-  
-    display: grid;
-    grid-template-rows: 20px 1fr 20px;
-    align-items: center;
-    justify-items: center;
-    min-height: 100svh;
-    padding: 80px;
-    gap: 64px;
-    font-family: var(--font-geist-sans);
+  --accent: var(--orange);
+
+  display: grid;
+  grid-template-rows: 20px 1fr 20px;
+  align-items: center;
+  justify-items: center;
+  min-height: 100svh;
+  padding: 80px;
+  gap: 64px;
+  font-family: var(--font-geist-sans);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  grid-row-start: 2;
+}
+
+.nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
   }
-  
-  .main {
+
+}
+
+.main {
+  .hero {
     display: flex;
-    flex-direction: column;
-    gap: 32px;
-    grid-row-start: 2;
-  }
-  
-  .nav {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1rem 2rem;
-    justify-content: space-between;
     align-items: center;
-  
-    h1 {
-      font-size: 1.5rem;
-      font-weight: 800;
-    }
-  
-  }
-  
-  .main {
-    .hero {
+    justify-content: space-evenly;
+    max-width: 50vw;
+
+    .left {
+      h1 {
+        width: fit-content;
+        font-size: 3rem;
+      }
+
       display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      max-width: 50vw;
-      .left {
-        h1 {
-          width: fit-content;
-          font-size: 3rem;
-        }
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-  
-        p {
-          max-width: fit-content;
-          font-weight: 500;
-        }
+      flex-direction: column;
+      gap: 2rem;
+
+      p {
+        max-width: fit-content;
+        font-weight: 500;
       }
     }
   }
+}
 
-  .creators {
-    h1 {
-      margin-bottom: 1rem;
-    }
+.creators {
+  .title {
+    margin-bottom: 1rem;
   }
+}
 
-  .photos {
-    display: flex;
-    gap: 1rem;
+.photos {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 
-  }
-  
+}
