@@ -1,17 +1,24 @@
 import styles from "./page.module.scss";
 import DButton from "@/components/DButton";
 import Card from "@/components/Card";
+import Watermark from "@/components/Watermark";
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <Watermark />
       <nav className={styles.nav}>
         <div className={styles.logo}>
           <h1>
             Naturfag med <span id="accent">Æliot</span>
           </h1>
         </div>
-        <DButton text="Om os" fontSize="1rem" padding="0.5rem 1rem" />
+        <DButton
+          link="/om-os"
+          text="Om os"
+          fontSize="1rem"
+          padding="0.5rem 1rem"
+        />
       </nav>
       <main className={styles.main}>
         <div className={styles.hero}>
@@ -31,7 +38,7 @@ export default function Home() {
                 desc="Udforsk universets love og principper gennem spændende eksperimenter og interaktive lektioner"
                 link="/fysik"
                 color="var(--purple)"
-                icon="fa-regular fa-atom-simple"
+                icon="fa-regular fa-hourglass"
                 img="/img/fysik.png"
               />
               <Card

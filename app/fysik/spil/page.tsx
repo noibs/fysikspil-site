@@ -2,10 +2,12 @@ import UnityWebGL from "@/components/WebGLPlayer";
 import styles from "./page.module.scss";
 import DButton from "@/components/DButton";
 import Link from "next/link";
+import Watermark from "@/components/Watermark";
 
 const UnityGamePage: React.FC = () => {
   return (
     <div className={styles.page}>
+      <Watermark />
       <div className={styles.nav}>
         <div className={styles.logo}>
           <Link href={"/fysik"}>
@@ -24,7 +26,7 @@ const UnityGamePage: React.FC = () => {
       <h1 id="title">Fysikspil</h1>
       <div
         className={styles.gameContainer}
-        style={{ width: "800px", height: "600px" }}
+        style={{ width: "1000px", height: "700px" }}
       >
         <UnityWebGL />
       </div>

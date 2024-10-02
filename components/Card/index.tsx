@@ -5,11 +5,13 @@ import Image from "next/image";
 
 const Card: React.FC<{
   title: string;
-  desc: string;
-  link: string;
-  color: string;
-  icon: string;
+  desc?: string;
+  link?: string;
+  color?: string;
+  icon?: string;
   img?: string;
+  height?: number;
+  width?: number;
   iconRotate?: string;
   unavailable?: boolean;
 }> = ({
@@ -21,6 +23,8 @@ const Card: React.FC<{
   img,
   iconRotate,
   unavailable,
+  width,
+  height,
 }) => {
   return (
     <div className={styles.container}>
@@ -32,12 +36,19 @@ const Card: React.FC<{
       )}
       {img && (
         <div className={styles.img}>
-          <Image src={img} alt="sick ass car" width={500} height={500} />
+          <Image
+            src={img}
+            alt="sick ass car"
+            width={width || 500}
+            height={height || 500}
+          />
         </div>
       )}
       <div className={styles.info}>
         <div className={styles.title}>
-          <i className={icon} style={{ color: color, rotate: iconRotate }} />
+          {icon && (
+            <i className={icon} style={{ color: color, rotate: iconRotate }} />
+          )}
           <h1
             className={styles.title}
             style={{ "--button-color": color } as React.CSSProperties}
@@ -45,14 +56,16 @@ const Card: React.FC<{
             {title}
           </h1>
         </div>
-        <p className={styles.desc}>{desc}</p>
-        <DButton
-          fontSize="1rem"
-          text="Se mere"
-          color={color}
-          icon="fa-regular fa-book"
-          link={link}
-        />
+        {desc && <p className={styles.desc}>{desc}</p>}
+        {link && (
+          <DButton
+            fontSize="1rem"
+            text="Se mere"
+            color={color}
+            icon="fa-regular fa-book"
+            link={link}
+          />
+        )}
       </div>
     </div>
   );

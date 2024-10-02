@@ -43,12 +43,12 @@ const UnityWebGL: React.FC = () => {
       if (!window.createUnityInstance || !canvasRef.current) return;
 
       const config = {
-        dataUrl: "/game/Build/Build3.data",
-        frameworkUrl: "/game/Build/Build3.framework.js",
-        codeUrl: "/game/Build/Build3.wasm",
-        streamingAssetsUrl: "Build3",
-        companyName: "Build3",
-        productName: "Build3",
+        dataUrl: "/game/Build/Build6.data",
+        frameworkUrl: "/game/Build/Build6.framework.js",
+        codeUrl: "/game/Build/Build6.wasm",
+        streamingAssetsUrl: "Build6",
+        companyName: "Build6",
+        productName: "Build6",
         productVersion: "0.1",
       };
 
@@ -74,18 +74,14 @@ const UnityWebGL: React.FC = () => {
 
   const handleFullscreen = () => {
     const canvas = canvasRef.current;
-
     if (canvas) {
       if (canvas.requestFullscreen) {
         canvas.requestFullscreen();
       } else if (canvas.mozRequestFullScreen) {
-        // Firefox
         canvas.mozRequestFullScreen();
       } else if (canvas.webkitRequestFullscreen) {
-        // Chrome, Safari and Opera
         canvas.webkitRequestFullscreen();
       } else if (canvas.msRequestFullscreen) {
-        // IE/Edge
         canvas.msRequestFullscreen();
       }
     }
@@ -93,12 +89,12 @@ const UnityWebGL: React.FC = () => {
 
   return (
     <>
-      <Script src="/game/Build/Build3.loader.js" strategy="beforeInteractive" />
+      <Script src="/game/Build/Build6.loader.js" strategy="beforeInteractive" />
       <div id="unity-container" className={styles.container}>
         <canvas
           id="unity-canvas"
           ref={canvasRef}
-          style={{ width: "100%", height: "100%", padding: 0, margin: 0 }}
+          style={{ width: "1000px", height: "608px" }}
         />
         <div className={styles.info}>
           <p>Fysikspil</p>
