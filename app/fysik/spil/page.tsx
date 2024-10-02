@@ -29,6 +29,12 @@ const UnityGamePage: React.FC = () => {
         style={{ width: "1000px", height: "700px" }}
       >
         <UnityWebGL />
+        <div className={styles.warning}>
+          <p>
+            Spillet loader, vent venligst. <br /> Prøv at refreshe siden hvis
+            det tager for lang tid.
+          </p>
+        </div>
       </div>
     </div>
   );

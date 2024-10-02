@@ -43,12 +43,12 @@ const UnityWebGL: React.FC = () => {
       if (!window.createUnityInstance || !canvasRef.current) return;
 
       const config = {
-        dataUrl: "/game/Build/Build6.data",
-        frameworkUrl: "/game/Build/Build6.framework.js",
-        codeUrl: "/game/Build/Build6.wasm",
-        streamingAssetsUrl: "Build6",
-        companyName: "Build6",
-        productName: "Build6",
+        dataUrl: "/game/Build/Build7.data",
+        frameworkUrl: "/game/Build/Build7.framework.js",
+        codeUrl: "/game/Build/Build7.wasm",
+        streamingAssetsUrl: "Build7",
+        companyName: "Build7",
+        productName: "Build7",
         productVersion: "0.1",
       };
 
@@ -89,7 +89,7 @@ const UnityWebGL: React.FC = () => {
 
   return (
     <>
-      <Script src="/game/Build/Build6.loader.js" strategy="beforeInteractive" />
+      <Script src="/game/Build/Build7.loader.js" strategy="beforeInteractive" />
       <div id="unity-container" className={styles.container}>
         <canvas
           id="unity-canvas"

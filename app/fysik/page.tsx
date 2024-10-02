@@ -14,10 +14,10 @@ export default function Home() {
           </Link>
         </div>
         <DButton
-          icon="fa-regular fa-play"
+          icon="fa-regular fa-arrow-left"
           color="#bd93f9"
-          text="Åben Spil"
-          link="/fysik/spil"
+          text="Gå tilbage"
+          link="/"
         />
       </nav>
       <main className={styles.main}>
