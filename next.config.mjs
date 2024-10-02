@@ -6,7 +6,7 @@ export default {
   webpack: (config, { isServer }) => {
     if (isServer) {
       // Decompress Brotli files during build
-      const unityBuildDir = path.join(process.cwd(), 'public', 'Game', 'Build');
+      const unityBuildDir = path.join(process.cwd(), 'public', 'game', 'Build');
       fs.readdirSync(unityBuildDir).forEach(file => {
         if (file.endsWith('.br')) {
           const compressedPath = path.join(unityBuildDir, file);

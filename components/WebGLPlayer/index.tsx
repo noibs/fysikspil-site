@@ -16,7 +16,6 @@ interface UnityConfig {
 interface UnityInstance {
   Quit: () => Promise<void>;
   SetFullscreen: (fullscreen: boolean) => void;
-  // Add other properties and methods as needed
 }
 
 declare global {
