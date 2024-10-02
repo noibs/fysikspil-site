@@ -31,7 +31,7 @@ export default function Home() {
                 desc="Udforsk universets love og principper gennem spændende eksperimenter og interaktive lektioner"
                 link="/fysik"
                 color="var(--purple)"
-                icon="fa-light fa-regular fa-atom-simple"
+                icon="fa-regular fa-atom-simple"
                 img="/img/fysik.png"
               />
               <Card
@@ -40,7 +40,7 @@ export default function Home() {
                 desc="Udforsk universets love og principper gennem spændende eksperimenter og interaktive lektioner"
                 link="/img/car.jpg"
                 color="var(--blue)"
-                icon="fa-light fa-flask-vial"
+                icon="fa-regular fa-flask-vial"
                 img="/img/kemi.png"
               />
               <Card
@@ -49,7 +49,7 @@ export default function Home() {
                 desc="Udforsk universets love og principper gennem spændende eksperimenter og interaktive lektioner"
                 link="/img/car.jpg"
                 color="var(--green)"
-                icon="fa-light fa-dna"
+                icon="fa-regular fa-dna"
                 iconRotate="-15deg"
                 img="/img/biologi.png"
               />

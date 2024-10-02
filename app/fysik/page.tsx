@@ -10,7 +10,12 @@ export default function Home() {
             Fysik med <span id="accent">Æliot</span>
           </h1>
         </div>
-        <DButton icon="fa-regular fa-play" color="#bd93f9" text="Åben Spil" />
+        <DButton
+          icon="fa-regular fa-play"
+          color="#bd93f9"
+          text="Åben Spil"
+          link="/fysik/spil"
+        />
       </nav>
       <main className={styles.main}>
         <div className={styles.hero}>
@@ -26,6 +31,7 @@ export default function Home() {
               icon="fa-regular fa-play"
               color="#bd93f9"
               text="Åben Spil"
+              link="/fysik/spil"
             />
           </div>
           <div className={styles.right}>
