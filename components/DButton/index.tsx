@@ -29,7 +29,7 @@ const DButton: React.FC<{
           } as React.CSSProperties
         }
       >
-        <i className={icon}></i> {text}
+        {icon && <i className={icon}></i>} {text}
       </button>
     </Link>
   );

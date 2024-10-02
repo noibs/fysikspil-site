@@ -1,15 +1,18 @@
 import UnityWebGL from "@/components/WebGLPlayer";
 import styles from "./page.module.scss";
 import DButton from "@/components/DButton";
+import Link from "next/link";
 
 const UnityGamePage: React.FC = () => {
   return (
     <div className={styles.page}>
       <div className={styles.nav}>
         <div className={styles.logo}>
-          <h1>
-            Fysik med <span id="purple">Æliot</span>
-          </h1>
+          <Link href={"/fysik"}>
+            <h1>
+              Fysik med <span id="purple">Æliot</span>
+            </h1>
+          </Link>
         </div>
         <DButton
           icon="fa-regular fa-arrow-left"

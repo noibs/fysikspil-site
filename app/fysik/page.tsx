@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./page.module.scss";
 import DButton from "@/components/DButton";
 
@@ -6,9 +7,11 @@ export default function Home() {
     <div className={styles.page}>
       <nav className={styles.nav}>
         <div className={styles.logo}>
-          <h1>
-            Fysik med <span id="accent">Æliot</span>
-          </h1>
+          <Link href={"/"}>
+            <h1>
+              Fysik med <span id="accent">Æliot</span>
+            </h1>
+          </Link>
         </div>
         <DButton
           icon="fa-regular fa-play"

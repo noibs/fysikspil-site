@@ -11,7 +11,7 @@ export default function Home() {
             Naturfag med <span id="accent">Æliot</span>
           </h1>
         </div>
-        <DButton fontSize="1.1rem" padding="1rem 2rem" />
+        <DButton text="Om os" fontSize="1rem" padding="0.5rem 1rem" />
       </nav>
       <main className={styles.main}>
         <div className={styles.hero}>
